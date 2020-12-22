@@ -1,16 +1,16 @@
 # *Trump says*. PDA with NLP+visualization for 35 Trump rallies from 2019-2020.
 
-**Objective**: 
+### **Objective**: 
 - Helping to solve basic PDA with NLP.
 
-**Main tools**: 
+### **Main tools**: 
 - spaCy, NLTK, visualization (matplotlib, plotly, seaborn, yellowbrick)
 - language: Python :snake:
 
-**Dataset**:
+### **Dataset**:
 - https://www.kaggle.com/christianlillelund/donald-trumps-rallies
 
-**Content**:
+### **Content**:
 
 
     1. Word frequencies
@@ -33,7 +33,7 @@
     Which is the sentiment flow within the speeches? Is there a pattern?
     Which sentiment usually describes a certain NE?
 
-**Results**:
+### **Results**:
 
 **1. Word frequencies**:
 
@@ -50,7 +50,7 @@ The purpose of this section was to see the use of different named entities in Tr
 While for organizations the amount of mentions to the respective entities are much more balanced (see [here](https://plotly.com/~jebefor/9/) the interactive plot), we observed that for person Joe Biden (24.4%), Donald Trump (13.6%), Hillary Clinton (7%) and Mike Pence (6.52%) make up more than half the mentions to person names (plot [here](https://plotly.com/~jebefor/1/)). Even more, America (33.1%) and China (14.1%) alone make up almost 50% the mentions of geopolitical entities (plot [here](https://plotly.com/~jebefor/7/)).
 
 A good illustrator of these results are the collected wordclouds on the types of words that usually accompany these entities (i.e., nouns, verbs and adjectives). 
-Not only these clearly show a focus on certain entities over others that we can expect from the political context, but also show the different treatment depending on the gender in both frequency (lower) and types of accompanying words (mentions to attractiveness, both in the case of women).
+Not only these clearly show a focus on certain entities over others that we can expect from the political context, but also show a different treatment depending on the gender in both frequency (lower) and types of accompanying words (mentions to attractiveness, both in the case of women).
 
 - Examples: 
 
@@ -117,3 +117,11 @@ Finally, concerning sentiment rates of words accompanying certain named entities
 *keyword* | Bernie | Biden | Obama | China | Trump | America | Pence 
 --- | --- | --- | --- | --- | --- | --- | --- 
 *sentiment compound* | -0.15 | -0.09 | 0.07 | 0.14 | 0.23 | 0.42 | 0.54
+
+### **Conclusion**:
+
+NLP proves to be a very useful tool for political text analytics with great potencial to solve more complex questions involving metonomies, contrastive pairs or responsible actors, to name a few. 
+
+For the case at hand, it helped us to understand the complexity of the text, the amount of tension in the discourse, the portrayal of different named entities, the distribution of keywords throughout the discourse and their coexistance, the overall sentiment of Trump's discourse and Trump's sentiment on given NEs, as well as the different sentiment patterns of the overall discourse observed related to specific conditions (e.g. COVID-19).
+
+As a final note, we observed a need to train the language model to have more accurate results both at the global language level (e.g. identify 'many' as adverb instead of adjective) and at the dataset language level (e.g. identify 'Obama Administration' as organization instead of just 'Obama').
